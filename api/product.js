@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const congraModel = require("../src/model/api.model");
 
 /**
  * GET product list.
@@ -8,9 +9,10 @@ const router = express.Router();
  */
 router.get("/", async (req, res) => {
   try {
+    const congra = await congraModel.find();
     res.json({
       status: 200,
-      message: "Get data has successfully 1",
+      message: congra,
     });
   } catch (error) {
     console.error(error);
