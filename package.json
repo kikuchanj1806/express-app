@@ -4,7 +4,7 @@
   "description": "Deploy express js to vercel.",
   "main": "index.js",
   "engines": {
-    "node" : "18.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node index.js"
@@ -13,6 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.17.1",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1",
+    "path": "^0.12.7"
   }
 }
