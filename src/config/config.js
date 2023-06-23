@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const url = `mongodb://127.0.0.1:27017/wedding`;
+const MONGODB_URI = process.env.MONGODB_URI;
+console.log(MONGODB_URI);
 
 const connectionParams = {
   useNewUrlParser: true,
@@ -9,7 +11,7 @@ const connectionParams = {
 
 module.exports.connectDB = async () => {
   try {
-    await mongoose.connect(url, connectionParams);
+    await mongoose.connect(MONGODB_URI, connectionParams);
     console.log('Connected to the database');
   } catch (error) {
     console.error(`Error connecting to the database. \n${error}`);
