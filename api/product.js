@@ -9,10 +9,10 @@ const congraModel = require("../src/model/api.model");
  */
 router.get("/", async (req, res) => {
   try {
-    // const congra = await congraModel.find();
+    const congra = await congraModel.find();
     res.json({
       status: 200,
-      message: "congra",
+      message: congra,
     });
   } catch (error) {
     console.error(error);
